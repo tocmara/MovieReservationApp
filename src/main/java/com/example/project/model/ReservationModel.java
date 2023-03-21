@@ -16,13 +16,13 @@ public class ReservationModel {
     private int id;
 
     @Column(name = "movie")
-    private Movie movie;
+    private MovieModel movie;
 
     @Column(name = "room")
-    private Room room;
+    private RoomModel room;
 
     @Column(name = "user")
-    private User user;
+    private UserModel user;
 
     @Column(name = "noOfTickets")
     private int noOfTickets;
@@ -30,7 +30,7 @@ public class ReservationModel {
     @Column(name = "screeningTime")
     private Date screeningTime;
 
-    public ReservationModel(int id, Movie movie, Room room, User user, int noOfTickets, Date screeningTime) {
+    public ReservationModel(int id, MovieModel movie, RoomModel room, UserModel user, int noOfTickets, Date screeningTime) {
         this.id = id;
         this.movie = movie;
         this.room = room;
@@ -47,27 +47,27 @@ public class ReservationModel {
         this.id = id;
     }
 
-    public Movie getMovie() {
+    public MovieModel getMovie() {
         return movie;
     }
 
-    public void setMovie(Movie movie) {
+    public void setMovie(MovieModel movie) {
         this.movie = movie;
     }
 
-    public Room getRoom() {
+    public RoomModel getRoom() {
         return room;
     }
 
-    public void setRoom(Room room) {
+    public void setRoom(RoomModel room) {
         this.room = room;
     }
 
-    public User getUser() {
+    public UserModel getUser() {
         return user;
     }
 
-    public void setUser(User user) {
+    public void setUser(UserModel user) {
         this.user = user;
     }
 

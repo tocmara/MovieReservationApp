@@ -10,6 +10,10 @@ public class Room {
         this.capacity = capacity;
     }
 
+    public Room() {
+
+    }
+
     public String getName() {
         return name;
     }

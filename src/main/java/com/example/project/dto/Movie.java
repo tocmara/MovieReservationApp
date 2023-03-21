@@ -14,6 +14,10 @@ public class Movie {
         this.price = price;
     }
 
+    public Movie() {
+
+    }
+
     public String getName() {
         return name;
     }

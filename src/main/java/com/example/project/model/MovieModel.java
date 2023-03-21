@@ -30,6 +30,9 @@ public class MovieModel {
         this.price = price;
     }
 
+    public MovieModel() {
+    }
+
     public int getId() {
         return id;
     }
