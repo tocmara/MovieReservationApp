@@ -25,6 +25,10 @@ public class UserModel {
         this.email = email;
     }
 
+    public UserModel() {
+
+    }
+
     public int getId() {
         return id;
     }
