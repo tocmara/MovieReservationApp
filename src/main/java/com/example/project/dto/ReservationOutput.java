@@ -2,17 +2,16 @@ package com.example.project.dto;
 
 import java.util.Date;
 
-public class Reservation {
+public class ReservationOutput {
 
-    private String reservationId;
-
+    private int reservationId;
     private Movie movie;
     private Room room;
     private User user;
     private int noOfTickets;
     private Date screeningTime;
 
-    public Reservation(String reservationId, Movie movie, Room room, User user, int noOfTickets, Date screeningTime) {
+    public ReservationOutput(int reservationId, Movie movie, Room room, User user, int noOfTickets, Date screeningTime) {
         this.reservationId = reservationId;
         this.movie = movie;
         this.room = room;
@@ -21,11 +20,15 @@ public class Reservation {
         this.screeningTime = screeningTime;
     }
 
-    public String getReservationId() {
+    public ReservationOutput() {
+
+    }
+
+    public int getReservationId() {
         return reservationId;
     }
 
-    public void setReservationId(String reservationId) {
+    public void setReservationId(int reservationId) {
         this.reservationId = reservationId;
     }
 

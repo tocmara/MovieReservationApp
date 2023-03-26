@@ -1,35 +1,18 @@
-package com.example.project.model;
-
-
-import jakarta.persistence.*;
+package com.example.project.dto;
 
 import java.util.Date;
 
-@Entity
-@Table(name = "reservations")
-public class ReservationModel {
+public class ReservationInput {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-
-    @Column(name = "movie")
+    private int reservationId;
     private int movieId;
-
-    @Column(name = "room")
     private int roomId;
-
-    @Column(name = "user")
     private int userId;
-
-    @Column(name = "noOfTickets")
     private int noOfTickets;
-
-    @Column(name = "screeningTime")
     private Date screeningTime;
 
-    public ReservationModel(int id, int movieId, int roomId, int userId, int noOfTickets, Date screeningTime) {
-        this.id = id;
+    public ReservationInput(int reservationId, int movieId, int roomId, int userId, int noOfTickets, Date screeningTime) {
+        this.reservationId = reservationId;
         this.movieId = movieId;
         this.roomId = roomId;
         this.userId = userId;
@@ -37,16 +20,12 @@ public class ReservationModel {
         this.screeningTime = screeningTime;
     }
 
-    public ReservationModel() {
-
+    public int getReservationId() {
+        return reservationId;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
+    public void setReservationId(int reservationId) {
+        this.reservationId = reservationId;
     }
 
     public int getMovieId() {
